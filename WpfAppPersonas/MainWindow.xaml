@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfAppPersonas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestión de Personas"
+        Height="450"
+        Width="700"
+        Background="#f5f5f5"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título -->
+        <TextBlock Text="Listado de Personas"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="#2c3e50"
+                   HorizontalAlignment="Center"
+                   Margin="0 0 0 20"/>
+
+        <!-- DataGrid -->
+        <DataGrid x:Name="PersonasDataGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="True"
+                  IsReadOnly="True"
+                  CanUserAddRows="False"
+                  Margin="0"
+                  Background="White"
+                  AlternatingRowBackground="#ecf0f1"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="Horizontal"
+                  RowHeaderWidth="0"
+                  FontSize="14"
+                  SelectionMode="Single"
+                  BorderThickness="1"
+                  BorderBrush="#bdc3c7"
+                  />
+    </Grid>
+</Window>
